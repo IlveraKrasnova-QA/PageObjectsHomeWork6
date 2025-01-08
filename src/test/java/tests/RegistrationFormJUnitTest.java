@@ -12,6 +12,7 @@ public class RegistrationFormJUnitTest extends TestBase {
     @Test
     void successfulRegistrationFormJUnitTest() {
         registrationFormPage.openPage()
+                .removeBanner()
                 .setFirstName("kotechka")
                 .setLastName("kotova")
                 .setUserEmail("k@kt.com")
@@ -40,7 +41,7 @@ public class RegistrationFormJUnitTest extends TestBase {
     @Test
     void minimumAmountOfInformationForRegistrationJUnitTest() {
         registrationFormPage.openPage()
-                .submitForm()
+                .removeBanner()
                 .setFirstName("kotechka")
                 .setLastName("kotova")
                 .setGender()
@@ -54,7 +55,7 @@ public class RegistrationFormJUnitTest extends TestBase {
     @Test
     void negativeCheckJUnitTest() {
         registrationFormPage.openPage()
-                .submitForm()
+                .removeBanner()
                 .setFirstName("kotechka")
                 .setLastName("kotova")
                 .setGender()
